@@ -1,0 +1,57 @@
+<!-- 434 -->
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Chuck Norris Facts</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body id="body">
+
+        <div class="chuck">
+
+
+
+            <div class="factHolder">
+
+                <p id="fact"></p>
+
+            </div>
+
+
+            <p class="button" onclick="cat()">Learn More</p>
+    
+
+        </div>
+        
+        <div class="footer">
+            <a href="https://github.com/wbf22/260creativeProject2">Github Link</a>
+          </div>
+
+
+    </body>
+    <script>
+        cat();
+
+        function cat(){
+            // var myurl = "https://cataas.com/c/gif";
+            var myurl = "https://api.chucknorris.io/jokes/random";
+            fetch(myurl)
+                .then(response => response.json())
+                .then(data => { 
+                    document.getElementById("fact").innerHTML = data.value;
+                });
+                
+                
+            
+
+           
+            
+            
+        }
+
+        
+    </script>
+</html>
+
+
+
